@@ -1,0 +1,9 @@
+kubectl run adhocpod7 --image=alpine --dry-run -o yaml >q7.yml
+vim q7.yml //do the following in file
+kubectl apply -f q7.yml
+kubectl get po -o wide
+kubectl exec -it adhocpod7 sh
+#cd mnt
+#ls
+#cat adhocoutput.txt
+#exit

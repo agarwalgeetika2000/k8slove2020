@@ -1,0 +1,7 @@
+kubectl run adhocpod1 --image=nginx --port 80 --restart Never --dry-run -o yaml > q2.yaml
+kubectl create -f q2.yaml
+kubectl create service nodeport q2svcgeet --tcp 80 --dry-run -o yaml > svc.yaml
+kubectl get po --show-labels
+kubectl create -f svc.yaml
+kubectl get po
+kubectl get svc

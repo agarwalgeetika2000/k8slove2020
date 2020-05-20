@@ -1,0 +1,13 @@
+cd k8slove2020
+ls
+vim adhochttpd.dockerfile 
+vim start.sh
+ls webapp1/    
+ls webapp1/ -a   
+vim .dockerignore
+docker build -t may2020q1:v1  -f adhochttpd.dockerfile .
+docker images
+docker run --name c1 -idt -p 9900:80 may2020q1:v1
+docker exec -it c1 env
+docker run --name c2 -idt -p 9008:80 -e x=app2 may2020q1:v1
+docker exec -it c2 env 

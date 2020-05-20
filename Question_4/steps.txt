@@ -1,0 +1,5 @@
+vim q4rs.yml
+kubectl apply -f q4rs.yml
+kubectl get rs
+kubectl expose rs adhocgeet4 --type LoadBalancer --port 80
+kubectl get svc 

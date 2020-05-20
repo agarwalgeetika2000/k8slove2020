@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+ name: q3svcgeet
+ labels:
+  adhoc: geetq3
+
+spec:
+ containers:
+  - name: geetc1
+    image: geetika2000/may2020q1:v1 
+    ports: 
+     - containerPort: 80
+    env:   # this is for replacing the env variable in POD
+     - name: x # this must be the same variable that we define in dockerfile under env keyword
+       value: app2 # this is the replaced value
+
+   

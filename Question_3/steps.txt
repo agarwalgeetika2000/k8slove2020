@@ -1,0 +1,5 @@
+vim q3.yml
+kubectl create -f q3.yml
+kubectl get po
+kubectl expose pods q3geetsvc --type LoadBalancer --port 80
+kubeectl get svc

@@ -1,0 +1,6 @@
+kubectl apply -f q5dep1.yml
+kubectl get deployments
+kubectl get rs
+kubectl get pods --show-labels
+kubectl expose pods deployment1 --type LoadBalancer --port 80
+kubeectl get svc
